@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: test-firestore
+  cache:
+    cache-names:
+    - users
+    caffeine:
+      spec: "maximumSize=500,expireAfterAccess=600s"
+  cloud:
+    gcp:
+      firestore:
+        emulator:
+          enabled: true
