@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'com.example'
-version = '0.0.8'
+version = '0.0.9'
 sourceCompatibility = '17'
 
 configurations {
@@ -32,17 +32,15 @@ dependencies {
 	implementation 'com.google.cloud:spring-cloud-gcp-starter'
 	implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
 	compileOnly 'org.projectlombok:lombok'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
+	// developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.testcontainers:junit-jupiter'
 
 	implementation 'com.google.cloud:spring-cloud-gcp-starter-trace'
-	// implementation 'com.google.cloud:spring-cloud-gcp-starter-metrics'
+	implementation 'com.google.cloud:spring-cloud-gcp-starter-metrics'
 	implementation 'com.google.cloud:spring-cloud-gcp-starter-logging'
 	// 
-	// implementation 'com.google.cloud:spring-cloud-gcp-starter-firestore'
 	implementation 'com.google.cloud:spring-cloud-gcp-data-firestore'
 	implementation 'com.github.ben-manes.caffeine:caffeine:3.1.1'
 	implementation 'org.testcontainers:gcloud'
