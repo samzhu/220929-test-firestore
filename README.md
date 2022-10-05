@@ -25,6 +25,9 @@ gcloud projects add-iam-policy-binding $PROJECT_ID \
 gcloud projects add-iam-policy-binding $PROJECT_ID \
     --member="serviceAccount:$SERVICE_ACCOUNT_ID_RUNTIME@$PROJECT_ID.iam.gserviceaccount.com" \
     --role="roles/logging.serviceAgent"
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+    --member="serviceAccount:$SERVICE_ACCOUNT_ID_RUNTIME@$PROJECT_ID.iam.gserviceaccount.com" \
+    --role="roles/monitoring.metricWriter"
 ```
 
 
