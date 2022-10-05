@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'com.example'
-version = '0.0.4'
+version = '0.0.8'
 sourceCompatibility = '17'
 
 configurations {
@@ -39,7 +39,7 @@ dependencies {
 	testImplementation 'org.testcontainers:junit-jupiter'
 
 	implementation 'com.google.cloud:spring-cloud-gcp-starter-trace'
-	implementation 'com.google.cloud:spring-cloud-gcp-starter-metrics'
+	// implementation 'com.google.cloud:spring-cloud-gcp-starter-metrics'
 	implementation 'com.google.cloud:spring-cloud-gcp-starter-logging'
 	// 
 	// implementation 'com.google.cloud:spring-cloud-gcp-starter-firestore'

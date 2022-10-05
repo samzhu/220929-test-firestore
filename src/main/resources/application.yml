@@ -5,9 +5,16 @@ spring:
     cache-names:
     - users
     caffeine:
-      spec: "maximumSize=500,expireAfterAccess=600s"
+      spec: "maximumSize=500,expireAfterWrite=600s"
   # cloud:
   #   gcp:
   #     firestore:
   #       emulator:
   #         enabled: true
+  profiles:
+    active:
+    - dev
+
+spring.sleuth.sampler.probability: 1.0
+spring.sleuth.web.skipPattern: (^cleanup.*|.+favicon.*)
+
