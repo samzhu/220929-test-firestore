@@ -16,27 +16,31 @@ import reactor.core.publisher.Mono;
 @RestController
 @RequiredArgsConstructor
 @FieldDefaults(makeFinal = true, level = AccessLevel.PRIVATE)
-@RequestMapping("/user")
+@RequestMapping
 public class UserController {
 
     UserService service;
 
-    @PostMapping
+    @PostMapping(path = "/user")
     public Mono<User> save(@RequestBody User user) {
         return service.save(user);
     }
 
-    @GetMapping(path = "/all")
+    @GetMapping
+    public void index() {
+    }
+
+    @GetMapping(path = "/user/all")
     public Flux<User> getAll() {
         return service.getAll();
     }
 
-    @GetMapping(path = "/test")
+    @GetMapping(path = "/user/test")
     public Mono<Void> test() {
         return service.test();
     }
 
-    @GetMapping("/{name}")
+    @GetMapping("/user/{name}")
     public Mono<User> getById(@PathVariable String name) {
         return service.findByName(name);
     }

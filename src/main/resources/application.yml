@@ -6,8 +6,8 @@ spring:
     - users
     caffeine:
       spec: "maximumSize=500,expireAfterAccess=600s"
-  cloud:
-    gcp:
-      firestore:
-        emulator:
-          enabled: true
+  # cloud:
+  #   gcp:
+  #     firestore:
+  #       emulator:
+  #         enabled: true
